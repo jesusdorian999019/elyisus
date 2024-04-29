@@ -1,0 +1,343 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+body { 
+    font-family: 'Times New Roman', serif;
+    margin: 0; 
+    padding: 0;    /*elimina el espacio*/
+    background: url(imagenes/oppenheimer.jpg);
+    background-attachment: fixed;         /*permanezca fija en su posición*/
+    background-size: cover;/* cubre el area del body (cuerpo)*/
+    background-repeat: no-repeat;
+  }
+
+
+
+.header { 
+    background-image: linear-gradient(to right, #3a352e,#e66c09,#c39427);
+    color: #fff; 
+    padding: 5px 10px;   /*agrega espacio*/
+    text-align: center;           
+    box-shadow: 0 15px 20px rgba(83, 74, 74, 0.6);     /* efecto de sombra*/
+    font-optical-sizing: auto;              /*renderiza las fuentes web para mejorar la legibilidad*/
+    font-family:"Lugrasimo", cursive;
+}
+
+.nav { /*navegacion*/
+    /*background: #615454;*/
+    padding: 10px 0;/*relleno*/
+    backdrop-filter: blur(80px);/*fondo de pantalla en desenfoque*/
+    box-shadow: 0 15px 20px rgba(83, 74, 74, 0.6);/*sombra en la caja */
+    border-style: outset;/*estilo de borde*/
+    color:#fff;/*color de texto en blanco*/
+    font-size: 18px;/*tamaño de texto*/
+}
+.nav ul { 
+    list-style: none;    /*Elimina los marcadores de punto o viñetas*/
+    padding: 0; /*sin relleno*/
+    margin: 0; /*sin margen*/
+    display: flex;                    /*contenedor flexible*/
+    justify-content: center;  /*Alinea horizontalmente el contenido*/
+}
+.nav ul li { /*elementos en lista dentro de la barra de nav*/
+    margin: 0 15px;/*margen de 0 en la parte de arriba y 15 en los lados*/
+}
+
+
+
+
+
+.nav ul li a { /*enlaces*/
+    color: #fff; /*texto color*/
+    text-decoration: none;/*elimino su decoracion*/
+    font-optical-sizing: auto;/*ajuste optico de fuente en automs*/
+    font-family: "Finger Paint", sans-serif;/*tipo de fuente*/
+    cursor: pointer;/*al pasar el mouse este pone un cursos en modo mano o touch para tocar xd*/
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+.main {
+    display: flex; /* Contenedor principal en fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas si es necesario */
+    width: 80%; /* Ajusta el ancho deseado para el contenedor principal */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    gap: 30px;/*separacion*/
+    padding: 5%;/*relleno*/
+  }
+  
+
+
+
+
+
+
+
+
+  .block {
+    display: flex; /* Bloques individuales en fila */
+    align-items: center; /* Centra los vídeos verticalmente */
+    justify-content: center; /* Centra los vídeos horizontalmente */
+    margin-bottom: 20px; /* Añade margen inferior entre bloques */
+    flex: 1 0 auto; /* Ocupa espacio equitativo en la fila */
+    border-style: outset;/*estilo de salida el borde*/
+    border-color: rgb(92, 57, 12);/*color de borde*/
+  }
+
+  
+
+
+
+
+
+
+  .block iframe {
+    width: 100%; /* Ocupa todo el ancho del bloque */
+    height: 210px; /* Define la altura deseada para los vídeos */
+  }
+  
+
+
+
+
+
+
+
+
+  /* configuracion para ajuste a pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    .main {
+      flex-direction: column; /* cambia a columnas en caso de ser la patnalla a tamaño celular */
+    }
+  
+    .block {
+      flex: 1 0 auto; /* Ocupa espacio equitativo en la columna */
+    }
+  
+    .block iframe {
+      height: 200px; /* Ajusta la altura del iframe en pantallas pequeñas */
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+/* Bloques e imágenes */
+
+/* Configuración de la imagen */
+
+.wrapper {/**/
+    margin: 150px auto;/*margen superior e inferior de 150px */
+    width: 70%; /* Ajusta el ancho del contenedor para diferentes tamaños de pantalla */
+    display: flex;/*las cajas, div o link seran flexibles*/
+    justify-content: center;/*centrare orzontalmente los elementos*/
+    min-height: 100vh; /* Asegura que el contenedor llene la altura del visor */
+    align-items: center;/*centramos los elementos*/
+    backdrop-filter: blur(6px);/*desenfoque de fondo*/
+  }
+  
+
+
+
+  img {
+    max-width: 50%; /* La imagen se escala proporcionalmente dentro del contenedor */
+    border: 3px solid white;/*borde solido de blanco*/
+    border-radius: 10px;/*borde redondo*/
+    margin-right: 15px;/*margen derecho*/
+  }
+  
+
+
+
+
+
+
+  .text-box {
+    color: white;/*color de texto*/
+  }
+  
+
+
+
+
+  .text-box h2 {
+    font-size: calc(1.5rem + 2vw); /* El tamaño de la fuente se adapta según el ancho del visor */
+    font-family: "Expletus Sans", sans-serif;/*fuente de texto*/
+    margin-bottom: 10px;/*margen del boton inferior a 10 px*/
+  }
+  
+
+
+
+
+
+
+  .text-box p {
+    font-family: "Explora", serif;/*fuente de texto*/
+    font-size: 20px;/*tamaño del texot*/
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* Consultas de medios para pantallas pequeñas (tablets y smartphones) */
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column; /* Apila la imagen y el cuadro de texto verticalmente en pantallas pequeñas */
+      align-items: flex-start; /* Alinea el contenido a la izquierda en pantallas pequeñas */
+    }
+  
+    img {
+      margin-right: 0;
+      margin-bottom: 15px; /* Agrega espacio entre la imagen y el texto en pantallas pequeñas */
+    }
+  }
+  
+  
+  
+/*parte baja*/
+   /* Consultas de medios para pantallas pequeñas (ajusta el punto de corte según sea necesario) */
+   @media only screen and (max-width: 768px) {                                                            
+    .cajuela {                                                                 /*define la disposición de las columnas dentro de los elementos*/
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*defino las colmnas a cuadricula*/
+      
+    }
+  }
+  
+
+
+
+
+
+
+.cajuela {
+    display: grid;/*utiliza el modelo de caja*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espacio entre divs */
+    margin: 0 auto; /* Centrar la cuadrícula horizontalmente */
+  }
+  
+
+
+
+
+
+.caj1 {
+    background: url(imagenes/cuadrosecreto1.jpeg);/*fondo de imagen*/
+    background-size: cover;/*cubro el area del elemento */
+    background-repeat: no-repeat;/*hare que la imagen no se reputa*/
+    background-position: center;/*centramos imagen*/
+    margin-bottom: 20px;/*margen de boton inferior de 20px*/
+    height: 300px;/*altura*/
+    border-radius: 10px;/*estilo de borde*/
+    box-shadow: 20px 30px 20px rgba(9, 2, 2, 0.9);/*sombra*/
+    font-size: 20px;/*tamaño*/
+    overflow: hidden;/*ocultamos contenido si se exede*/
+    border-style: outset;/*estilo de borde en salida*/
+    border-color: rgb(216, 130, 32);/*color de borde*/
+    text-align: center;/*centramos texto*/
+    font-size: 22px;/*tamaño de texto*/
+    color: red;/*color de texot*/
+    font-family: "Blaka Ink", system-ui;/*tipo de fuente*/
+    text-decoration: none;/*elimino la decoracion*/
+}
+
+
+
+.caj2 {
+    
+    background: url(imagenes/armamento.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px; /*Reduceelmargeninferiorparapantallasmáspequeñas*/
+    border-radius: 10px;
+    box-shadow: 20px 30px 20px rgba(9, 2, 2, 0.9);
+    font-size: 20px;
+    overflow: hidden;
+    border-style: outset;
+    border-color: rgb(255, 94, 0);
+    text-align: center;
+    font-size: 22px;
+    color: red;
+    font-family: "Blaka Ink", system-ui;
+    text-decoration: none;
+  }
+
+
+
+.caj3 {
+    
+    background: url(imagenes/manual.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 30px 20px rgba(9, 2, 2, 0.9);
+    font-size: 20px;
+    overflow: hidden;
+    border-style: outset;
+    border-color: rgb(124, 60, 17);
+    text-align: center;
+    font-size: 22px;
+    color: red;
+    font-family: "Blaka Ink", system-ui;
+    text-decoration: none;
+}
+/*en las 3 cajas repeti lo de la caja 1, no le veo el poner comentarios a todos xd*/
+
+@media only screen and (max-width: 768px) {
+    .cajuela {
+      grid-template-rows: repeat(3, 1fr); /* 3 filas en una columna */
+      grid-gap: 10px; /* Ajusta el espacio para pantallas más pequeñas */
+    }
+  }
+
+
+
+/*iconos*/
+
+.footer a{
+    float: right;
+    padding: 4px;
+}
+
+
+
+
+
+/*cambio a la fuerza de los derechos*/
+.pppp{
+  color: white;/*le damos un color a los derechos de autor que pues es mas que nada mariconadas*/
+  font-family: monospace;/*le asigno una fuente*/
+        }
+
+

@@ -1,0 +1,114 @@
+*
+{
+    margin: 0;
+    padding: 0;
+/*elimino el margen y relleno*/
+}
+
+video{
+    position: absolute;/*hacemos que el video este fijo*/
+    top: 0;
+    left: 0;
+    /*ocupa todo el espacio en la esquinas superior izquierda */
+    width: 100%;
+    height: 100%;
+    /*ocupa todo el espacio al usar el porcentaje*/
+    object-fit: cover;/*ajuste de imagen*/
+    
+}
+
+.card {
+    width: 190px; /*ancho*/
+    padding: 1.9rem 1.2rem;
+    text-align: center; /*centramos el texto*/
+    backdrop-filter: blur(6px);
+    margin-top: 10%;
+    position: relative; /*ajuste de posicion sin afectar a los demas */
+    top: 0;
+    left: 0;
+    margin-top: 0 auto;
+    z-index: 2;
+    p{
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif/*tipo de fuente*/
+    }
+}
+/*Inputs*/
+.field {
+ margin-top: .5rem; /*usamos el margen superior a 0.5rem*/
+ display: flex;/*usamos el modelo de caja en flexible*/
+ align-items: center;/*centramos los elemtos*/
+ justify-content: center;/*centramos los contenidos en horiz*/
+ gap: .5em;/*le asigno un espacio*/
+ background-color: #4e0808;/*fondo de color */
+ border-radius: 4px;/*borde redondeado*/
+ padding: .5em 1em;/*relleno arriba y abajo*/
+}
+
+.input-icon {
+ height: 1em;/*altura*/
+ width: 1em;/*ancho*/
+ fill: #ffeba7;/*color de relleno*/
+}
+
+.input-field {
+ background: none;/*sin fondo*/
+ border: none;/*elimnino borde*/
+ outline: none;/*sin contorno*/
+ width: 100%;/*ancho a su maxima capacidad*/
+ color: #d3d3d3;/*color en blanco*/
+}
+
+/*Text*/
+.title {
+ margin-bottom: 1rem;/*margen*/
+ font-size: 1.5em;/*tamaño de rtexto*/
+ font-weight: 500;/*peso de la fuente*/
+ color: #f5f5f5;/*obviamente el color*/
+ font-family: "Black Ops One", system-ui;/*tipo de fuente*/
+font-weight: 400;/*repetimos el peso*/
+font-style: normal;/*estilo normal*/
+}
+
+/*Buttons*/
+.btn {
+    display: block;/*desplazamiento en bloque*/
+ margin: 1rem;/*margen*/
+ border: none;/*sin borde*/
+ border-radius: 4px;/*borde en circulo*/
+ font-weight: bold;/*fuente en negrita*/
+ font-size: .8em;/*tamaño de fuente*/
+ text-transform: uppercase;/*texto a mayusculas*/
+ padding: 0.6em 1.2em;/*relleno en sus lad */
+ background-color: #ff0000; /*fondo de color*/
+ color: #ffffff;
+ box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);/*sombra*/
+ transition: all .3s ease-in-out;/*transicion suave*/
+ text-decoration: none;/*elimino la decoracion */
+ padding-top: 5%;/*relleno*/
+}
+
+.btn-link {
+    padding-top: 6%;/*relleno*/
+ color: #f5f5f5;/*color */
+ display: block;/*elemento de bloque*/
+ font-size: .75em;/*tamaño de fuente*/
+ transition: color .3s ease-out;/*transicion suave de color*/
+}
+
+/*Hover & focus*/
+.field input:focus::placeholder {
+ opacity: 0;/*opacidad en 0 */
+ transition: opacity .3s;/*transicion en suave*/
+
+}
+
+.btn:hover {
+ background-color: #db2b2b;/*color de fondo*/
+ color: #f3f3f3;/*color de texto*/
+ box-shadow: 0 8px 24px 0 rgba(63, 49, 56, 0.2);/*sombra*/
+}
+
+.btn-link:hover {
+ color: #a13d6d;/*color de texto*/
+}

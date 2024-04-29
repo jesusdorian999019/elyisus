@@ -1,0 +1,6 @@
+.main {
+    display: grid;  /*permite organizar los elementos secundarios en una estructura similar a una cuadrícula con filas y columnas.*/
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  /*crea una cuadrícula que se rellena automáticamente*/ /*define el ancho mínimo y máximo para cada columna.*/ 
+    gap: 50px;     /* espacio entre los elementos*/
+    justify-items: center;   /* alinea los elementos*/
+}

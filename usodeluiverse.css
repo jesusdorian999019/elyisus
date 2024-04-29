@@ -1,0 +1,31 @@
+/*estoy usando iconos de ui verse aca solo modificare su transparencia y algunas cosas 
+ya que esta viene predefinido y ayudara solo con los links a el github con mi codigo completo
+*/
+.button {
+    float: right;/*se va a la derecha*/
+    display: flex;/*cajas en flexible*/
+    background-color: rgb(24, 23, 23);/*color de fondo*/
+    color: #e06614;/*color de texto*/
+    padding: 0.5rem 1.4rem;/*separacion o relleno*/
+    font-size: 0.875rem;/*tamaño*/
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: .6s ease;
+    text-decoration: none;
+  }
+  
+  .button svg {
+    height: 30px;
+  }
+  
+  .button:hover {
+    box-shadow: none;
+  }
